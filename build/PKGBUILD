@@ -1,10 +1,10 @@
 # Maintainer: Mücahit Kurtlar
 # Contributor: Mücahit Kurtlar
 
-pkgname=pudding
+pkgname=pudding-bin
 _pkgname=pudding
 pkgver=0.0.2
-pkgrel=1
+pkgrel=2
 pkgdesc="Dead simple mouse jiggler"
 arch=('x86_64')
 url="https://github.com/mucahitkurtlar/pudding"
