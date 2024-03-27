@@ -1,0 +1,22 @@
+# Maintainer: Mücahit Kurtlar
+# Contributor: Mücahit Kurtlar
+
+pkgname=pudding
+_pkgname=pudding
+pkgver=0.0.2
+pkgrel=1
+pkgdesc="Dead simple mouse jiggler"
+arch=('x86_64')
+url="https://github.com/mucahitkurtlar/pudding"
+license=('GPL3')
+depends=(libevdev hidapi)
+provides=(pudding)
+options=('!strip')
+source=("pudding::https://github.com/mucahitkurtlar/pudding/releases/download/v${pkgver}/pudding-linux-v${pkgver}-${CARCH}")
+sha256sums=('0ce327b30e8db5ec7498180ef03131b1995e15edb63a262c9445693a4361f5d2')
+
+package() {
+    install -d "${pkgdir}/usr/bin"
+    install -D -t "${pkgdir}/opt/${_pkgname}" -m 755 "${srcdir}/${_pkgname}"
+    ln -s "/opt/${_pkgname}/${_pkgname}" "${pkgdir}/usr/bin/${_pkgname}"
+}
