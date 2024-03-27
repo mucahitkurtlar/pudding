@@ -1,0 +1,14 @@
+[package]
+name = "pudding"
+version = "0.1.0"
+authors = ["Mucahit Kurtlar"]
+edition = "2021"
+description = "Dead simple mouse jiggler"
+readme = "README.md"
+repository = "https://github.com/mucahitkurtlar/pudding"
+license = "GPL-3.0"
+keywords = ["mouse", "jiggler", "input"]
+
+[dependencies]
+mouse-keyboard-input = "0.4.1"
+structopt = "0.3.26"
